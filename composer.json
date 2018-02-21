@@ -1,0 +1,9 @@
+{
+    "require": {
+        "zendframework/zend-servicemanager": "^3.3",
+        "zendframework/zend-eventmanager": "^3.2",
+        "bitexpert/prophiler-psr7-middleware": "^0.6.0",
+        "php-middleware/php-debug-bar": "^1.4",
+        "zendframework/zend-db": "^2.9"
+    }
+}
