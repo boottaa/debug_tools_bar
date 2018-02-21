@@ -9,7 +9,7 @@
 use PhpMiddleware\DoublePassDelegate;
 use Zend\Diactoros\ServerRequest;
 
-require_once __DIR__.'/loader.php';
+require_once __DIR__.'/main/loader.php';
 
 
 
@@ -51,7 +51,12 @@ $debugbarRenderer = $debugbar->getJavascriptRenderer();
 ?>
 <html>
 <head>
-	<?php echo $debugbarRenderer->renderHead() ?>
+	<?php
+	if($_SERVER['__DEBUG'])
+	{
+		echo $debugbarRenderer->renderHead();
+	}
+	?>
 </head>
 <body>
 <div>
@@ -62,5 +67,10 @@ $debugbarRenderer = $debugbar->getJavascriptRenderer();
 </html>
 
 <pre>
-<?php echo $debugbarRenderer->render() ?>
+	<?php
+	if($_SERVER['__DEBUG'])
+	{
+		echo $debugbarRenderer->render();
+	}
+	?>
 </pre>

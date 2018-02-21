@@ -6,12 +6,12 @@
  * Time: 12:50
  */
 
-$debug = true;
+$_SERVER['__DEBUG'] = true;
 
-if($debug){
+if($_SERVER['__DEBUG']){
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
 }
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
