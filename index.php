@@ -63,8 +63,6 @@ $debugbarRenderer = $debugbar->getJavascriptRenderer();
 
 </div>
 
-</body>
-</html>
 
 <pre>
 	<?php
@@ -74,3 +72,7 @@ $debugbarRenderer = $debugbar->getJavascriptRenderer();
 	}
 	?>
 </pre>
+</body>
+</html>
+
+
